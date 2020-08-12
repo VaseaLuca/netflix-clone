@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Lets do a Netlix Clone
+          Lets Go
         </a>
       </header>
     </div>

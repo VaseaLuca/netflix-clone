@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 
 import requests from "./requests";
 import Row from "./Row";

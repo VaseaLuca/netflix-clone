@@ -9,6 +9,7 @@
 .navbar-dark {
   transition: 0.4s ease-in-out;
   background-color: black;
+  background-image: none;
 }
 
 .navbar-logo {

@@ -44,6 +44,7 @@ console.log(movie)
           <p>{truncate(movie?.overview, 150)}</p>
         </div>
       </div>
+      <div className='banner-gradient' />
     </div>
   );
 }

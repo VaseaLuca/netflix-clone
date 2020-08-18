@@ -4,10 +4,12 @@ import requests from "./requests";
 import Row from "./Row";
 import Banner from "./Banner";
 import "./App.css";
+import Navbar from "./Navbar";
 
 function App() {
   return (
     <div className="app">
+      <Navbar />
       <Banner />
       <Row
         title="Original titles Netflix"

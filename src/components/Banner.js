@@ -18,26 +18,30 @@ function Banner() {
     }
     fetchData();
   }, []);
+
 console.log(movie)
+  function truncate(string,n) {
+    return string?.length > n ? string.substr(0, n-1) + '...' : string
+  }
   return (
     <div
       className="banner"
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie?.backdrop_path})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center center",
       }}
     >
       <div className="banner-contents">
-        <div className="title">
+        <div className="banner-title">
           <h1>{movie?.title || movie?.original_name || movie?.name}</h1>
         </div>
-        <div>
-          <button>Play</button>
-          <button>My List</button>
+        <div className="button-block">
+          <button className="banner-first_button">Play</button>
+          <button className="banner-second_button">My List</button>
         </div>
-        <div className="description">
-          <h1>{movie?.overview}</h1>
+        <div className="banner-description">
+          <p>{truncate(movie?.overview, 150)}</p>
         </div>
       </div>
     </div>

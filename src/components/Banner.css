@@ -2,4 +2,51 @@
   max-height: 50vh;
   object-fit: contain;
   height: 450px;
+  font-family:'Netflix Sans',
+  'Helvetica Neue',
+  Helvetica,
+  Arial,
+  sans-serif;
+}
+.banner-contents {
+  padding-top: 130px;
+  padding-left: 40px;
+}
+.banner-title {
+  color:#fff;
+  margin-bottom:1.2vw;  
+  font-size: 1.5vw;
+}
+.banner-description {
+  margin: 0.5vw 0 0 0;
+  color: #fff;
+  font-size:0.8rem;
+  width: 45rem;
+  max-width: 360px;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  padding-top: 1rem;
+  height: 80px;
+  font-weight: 800;
+}
+.banner-first_button  {
+  color: black;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 4px;
+  outline-style: none;
+  font-size: 1vw;
+}
+
+.banner-second_button  {
+  background-color: rgba(109, 109, 110, 0.7);
+  color:#fff;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  outline-style: none;
+  font-size: 1vw;
 }

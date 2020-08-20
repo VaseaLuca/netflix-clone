@@ -110,6 +110,16 @@
   }
 }
 
+@media (min-width: 200px) and (max-width: 1023px) and (orientation: landscape) {
+  .banner {
+    min-height: 120vh;
+  }
+   .banner-first_button,
+   .banner-second_button {
+     font-size: 0.7rem;
+   }
+}
+
 @media (min-width: 200px) and (max-width:480px) {
   .banner {
     min-height: 90vh;

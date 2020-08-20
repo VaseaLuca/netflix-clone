@@ -19,7 +19,6 @@ function Banner() {
     fetchData();
   }, []);
 
-console.log(movie)
   function truncate(string,n) {
     return string?.length > n ? string.substr(0, n-1) + '...' : string
   }
@@ -41,7 +40,7 @@ console.log(movie)
           <button className="banner-second_button">My List</button>
         </div>
         <div className="banner-description">
-          <p>{truncate(movie?.overview, 150)}</p>
+          <p>{truncate(movie?.overview, 200)}</p>
         </div>
       </div>
       <div className='banner-gradient' />

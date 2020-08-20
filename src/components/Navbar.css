@@ -1,7 +1,6 @@
 .navbar{
   position: fixed;
   height: 68px;
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(35, 35, 35, 0.7357317927170868) 100%);
   z-index: 10;
   width: 100%;
   display: flex;
@@ -18,13 +17,55 @@
   cursor: pointer;
   width: 150px;
 }
+
 .navbar-space{
   flex:1;
 }
 
 .navbar-avatar {
   margin:auto 55px;
-  height: 40px;
+  height: 35px;
   vertical-align: middle;
   cursor: pointer;
+}
+.navbar-tmdb {
+  width: 100px;
+}
+
+
+@media (min-width: 1281px) {
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 768px) and (max-width:1024px) and (orientation:landscape) {
+
+}
+
+@media (min-width: 481px) and (max-width:767px) {
+
+}
+
+@media (min-width: 200px) and (max-width:480px) {
+  .navbar{
+    height: 48px;
+  }
+  .navbar-logo {
+    width: 110px;
+    margin: auto 30px;
+  }
+  .navbar-tmdb {
+    width: 70px;
+  }
+  .navbar-avatar {
+    height: 28px;
+    margin:auto 30px;
+  }
 }

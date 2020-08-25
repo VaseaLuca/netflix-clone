@@ -36,11 +36,11 @@ function Banner() {
           <h1>{movie?.title || movie?.original_name || movie?.name}</h1>
         </div>
         <div className="button-block">
-          <button className="banner-first_button">Play</button>
-          <button className="banner-second_button">My List</button>
+          <button className="banner-first_button"><i className='play icon'/>Play</button>
+          <button className="banner-second_button"><i className='info circle icon' />More info</button>
         </div>
         <div className="banner-description">
-          <p>{truncate(movie?.overview, 200)}</p>
+          <p>{truncate(movie?.overview, 300)}</p>
         </div>
       </div>
       <div className='banner-gradient' />

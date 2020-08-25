@@ -4,6 +4,7 @@
   z-index: 10;
   width: 100%;
   display: flex;
+  top:0;
 }
 .navbar-dark {
   transition: 0.4s ease-in-out;
@@ -30,6 +31,7 @@
 }
 .navbar-tmdb {
   width: 100px;
+  cursor: pointer;
 }
 
 

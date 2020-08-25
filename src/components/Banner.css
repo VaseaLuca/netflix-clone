@@ -1,5 +1,6 @@
 .banner{
-  max-height: 50vh;
+  background-position: center center;
+  background-size: cover;
   object-fit: contain;
   font-family:'Netflix Sans',
   'Helvetica Neue',
@@ -78,21 +79,11 @@
     font-size: 1.6rem;
   }
 }
-@media (min-width: 1281px) {
-  .banner-title {
-    font-size: 1.8rem;
-  }
-}
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .banner-title {
-    font-size: 1.6rem;
-  }
-}
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .banner {
-    min-height: 80vh;
+  .banner-title {
+    font-size: 1.6rem;
   }
 
   .banner-gradient {
@@ -101,7 +92,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+  .banner-title {
+    font-size: 1.6rem;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -112,7 +105,7 @@
 
 @media (min-width: 200px) and (max-width: 1023px) and (orientation: landscape) {
   .banner {
-    min-height: 120vh;
+
   }
    .banner-first_button,
    .banner-second_button {
@@ -122,7 +115,7 @@
 
 @media (min-width: 200px) and (max-width:480px) {
   .banner {
-    min-height: 90vh;
+
   }
   .banner-gradient {
     background-image: none;

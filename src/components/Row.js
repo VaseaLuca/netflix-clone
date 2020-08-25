@@ -6,11 +6,13 @@ import axios from "./axios";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
-function Row({ title, fetchUrl, isLargeRow, isLastRow }) {
+function Row({ title, fetchUrl, isLargeRow }) {
+
+
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState('');
 
-
+  console.log(movies)
   const opts = {
     width: "100%",
     height: "390px",
@@ -63,9 +65,8 @@ function Row({ title, fetchUrl, isLargeRow, isLastRow }) {
           />
         ))}
       </div>
-      {trailerUrl && (
-        <Youtube className="row-youtube" opts={opts} videoId={trailerUrl} />
-      )}
+      {trailerUrl && <Youtube className="row-youtube" opts={opts} videoId={trailerUrl} />
+      }
     </div>
   );
 }

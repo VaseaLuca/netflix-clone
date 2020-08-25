@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import Popup from './Popup';
 import axios from "./axios";
 import requests from "./requests";
 
@@ -7,7 +8,9 @@ import './Banner.css';
 
 function Banner() {
   const [movie, setMovie] = useState([]);
+  const [popup, setPopup] = useState(false)
 
+  console.log(movie);
   useEffect(() => {
     async function fetchData() {
       const movieRequest = await axios.get(requests.fetchNetflixOriginals);
@@ -21,6 +24,9 @@ function Banner() {
     fetchData();
   }, []);
 
+  function togglePopup() {
+    setPopup(!popup)
+  }
 
   function truncate(string,n) {
     return string?.length > n ? string.substr(0, n-1) + '...' : string
@@ -40,7 +46,8 @@ function Banner() {
         </div>
         <div className="button-block">
           <button className="banner-first_button"><i className='play icon'/>Play</button>
-          <button className="banner-second_button"><i className='info circle icon' />More info</button>
+          <button className="banner-second_button" onClick={togglePopup} ><i className='info circle icon' />More info</button>
+          {popup? <Popup description={movie?.overview} img_src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} close={togglePopup} title={movie?.title || movie?.original_name || movie?.name} popularity={movie?.popularity} /> : null}
         </div>
         <div className="banner-description">
           <p>{truncate(movie?.overview, 300)}</p>

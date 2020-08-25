@@ -6,7 +6,7 @@ import axios from "./axios";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
-function Row({ title, fetchUrl, isLargeRow }) {
+function Row({ title, fetchUrl, isLargeRow, isLastRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState('');
 
@@ -31,8 +31,9 @@ function Row({ title, fetchUrl, isLargeRow }) {
     const handleClick = (poster) => {
       if(trailerUrl){
         setTrailerUrl('');
+
       } else {
-        movieTrailer(poster?.name || '')
+        movieTrailer(poster?.name || poster?.original_name || poster?.title || '')
           .then(url => {
             const urlParams = new URLSearchParams(new URL(url).search)
             const get = urlParams.get("v");
@@ -49,18 +50,22 @@ function Row({ title, fetchUrl, isLargeRow }) {
       <div className="header">
         <h2>{title}</h2>
       </div>
-      <div className="row-posters">
+      <div className={`row-posters`}>
         {movies.map((poster) => (
           <img
-            onClick={()=> handleClick(poster)}
-            className={`row-poster ${isLargeRow && "row-posterLarge"}`}
+            onClick={() => handleClick(poster)}
+            className={`row-poster ${isLargeRow && "row-posterLarge"} `}
             key={poster.id}
-            src={`${base_url}${isLargeRow ? poster.poster_path : poster.backdrop_path}`}
+            src={`${base_url}${
+              isLargeRow ? poster.poster_path : poster.backdrop_path
+            }`}
             alt={poster.name}
           />
         ))}
       </div>
-        {trailerUrl && <Youtube className='row-youtube'  opts={opts} videoId={trailerUrl}  />}
+      {trailerUrl && (
+        <Youtube className="row-youtube" opts={opts} videoId={trailerUrl} />
+      )}
     </div>
   );
 }

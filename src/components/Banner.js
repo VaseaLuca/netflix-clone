@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+
 import axios from "./axios";
 import requests from "./requests";
+
 import './Banner.css';
 
 function Banner() {
@@ -14,10 +16,11 @@ function Banner() {
           Math.floor(Math.random() * movieRequest.data.results.length)
         ]
       )
-  
     }
+      
     fetchData();
   }, []);
+
 
   function truncate(string,n) {
     return string?.length > n ? string.substr(0, n-1) + '...' : string

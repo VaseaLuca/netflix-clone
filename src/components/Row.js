@@ -12,7 +12,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState('');
 
-  console.log(movies)
   const opts = {
     width: "100%",
     height: "390px",

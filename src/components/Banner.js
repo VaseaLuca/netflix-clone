@@ -10,7 +10,6 @@ function Banner() {
   const [movie, setMovie] = useState([]);
   const [popup, setPopup] = useState(false)
 
-  console.log(movie);
   useEffect(() => {
     async function fetchData() {
       const movieRequest = await axios.get(requests.fetchNetflixOriginals);
@@ -20,9 +19,13 @@ function Banner() {
         ]
       )
     }
-      
     fetchData();
   }, []);
+
+// Prevent scrool when Modal is open
+  useEffect(()=> {
+    popup? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset';
+  })
 
   function togglePopup() {
     setPopup(!popup)
@@ -47,7 +50,7 @@ function Banner() {
         <div className="button-block">
           <button className="banner-first_button"><i className='play icon'/>Play</button>
           <button className="banner-second_button" onClick={togglePopup} ><i className='info circle icon' />More info</button>
-          {popup? <Popup description={movie?.overview} img_src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} close={togglePopup} title={movie?.title || movie?.original_name || movie?.name} popularity={movie?.popularity} /> : null}
+          {popup? <Popup description={movie?.overview} img_src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} close={togglePopup} title={movie?.title || movie?.original_name || movie?.name} popularity={Math.floor(movie?.popularity)} /> : null}
         </div>
         <div className="banner-description">
           <p>{truncate(movie?.overview, 300)}</p>

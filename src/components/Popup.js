@@ -23,17 +23,7 @@ function Popup({description,img_src, close, title, popularity}) {
             adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Odio
             pellentesque diam volutpat commodo sed. Elementum curabitur vitae
             nunc sed velit dignissim sodales ut eu. Euismod lacinia at quis
-            risus. Id ornare arcu odio ut sem nulla pharetra. Commodo viverra
-            maecenas accumsan lacus vel facilisis volutpat est velit. Et
-            sollicitudin ac orci phasellus. Et magnis dis parturient montes
-            nascetur ridiculus mus. Diam sollicitudin tempor id eu. Gravida cum
-            sociis natoque penatibus et magnis dis parturient montes. Gravida
-            rutrum quisque non tellus orci. Nec sagittis aliquam malesuada
-            bibendum arcu vitae elementum curabitur vitae. Vulputate eu
-            scelerisque felis imperdiet. Rhoncus dolor purus non enim praesent
-            elementum facilisis leo vel. Est pellentesque elit ullamcorper
-            dignissim cras tincidunt lobortis feugiat. Leo duis ut diam quam
-            nulla porttitor massa.
+            risus. 
           </div>
         </div>
       </div>

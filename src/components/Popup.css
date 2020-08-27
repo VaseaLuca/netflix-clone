@@ -20,6 +20,7 @@
   background-color: #181818;
   transform-origin: 50% 12.5%;
   transform: none;
+  overflow-y: auto;
 }
 .close{
   position: absolute !important;
@@ -54,6 +55,7 @@
 }
 .popup_about {
   margin: 20px 50px;
+  text-align: center;
   font-size: 1rem;
 }
 .popup_popularity{
@@ -77,41 +79,103 @@
 }
 
 
-@media (min-width: 1281px) {}
+@media (min-width: 1281px) {
+.popup_inner {
+  max-height: calc(100vh-200px);
+}
+.popup_about {
+  margin: 20px 55px;
+}
 
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
+.popup_loremipsum {
+  width: 450px;
+  margin-bottom: 25px;
+}
+}
 
-@media (min-width: 1025px) and (max-width: 1280px) {}
+@media (min-width: 1025px) and (max-width: 1280px) {
+.popup_inner {
+  width: 90%;
+  max-height: calc(100vh-200px);
+}
 
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
+.close {
+  top: 20px;
+  right: 50px;
+}
+.popup_about {
+  margin: 20px 55px;
+}
 
-@media (min-width: 768px) and (max-width: 1024px) {}
+.popup_loremipsum {
+  width: 450px;
+  margin-bottom: 25px;
+}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+.popup_inner {
+  width: 90%;
+  max-height: calc(100vh-200px);
+}
+.close {
+  top: 20px;
+  right: 35px;
+}
+.popup_about {
+  margin: 20px 55px;
+}
+.popup_loremipsum {
+  width: 450px;
+  margin-bottom: 25px;
+}}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+.popup_inner {
+  width: 90%;
+  max-height: calc(100vh-200px);
+}
+.close {
+  top: 20px;
+  right: 40px;
+}
 
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
+.popup_about {
+  margin: 20px 10px;
+}
+.popup_loremipsum {
+  width: 450px;
+  margin-bottom: 25px;
+}}
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {}
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
+@media (min-width: 481px) and (max-width: 767px) {
+.popup_inner {
+  width: 90%;
+  max-height: calc(100vh-200px);
+}
+.close {
+  top: 20px;
+  right: 20px;
+}
+.popup_about {
+  margin: 20px 10px;
+}
+.popup_loremipsum {
+  width: 450px;
+  margin-bottom: 25px;
+}}
 
 @media (min-width: 200px) and (max-width: 480px) {
-
+.popup_inner{
+  width: 90%;
+  max-height: calc(100vh-200px);
 }
+.close {
+  top:20px;
+  right: 20px;
+}
+.popup_about{
+  margin: 20px 10px;
+}
+.popup_loremipsum {
+  width: 250px;
+  margin-bottom: 25px;
+}}

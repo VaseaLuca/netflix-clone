@@ -12,6 +12,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState('');
 
+//The settings for Youtube Player
+
   const opts = {
     width: "100%",
     height: "390px",
@@ -20,6 +22,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
       autoplay: 1,
     },
   };
+//Fetch data from tmdb 
 
   useEffect(() => {
     async function fetchData() {
@@ -29,10 +32,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
     fetchData();
   }, [fetchUrl]);
 
+//Onclick display trailer and swich off the trailer
     const handleClick = (poster) => {
       if(trailerUrl){
         setTrailerUrl('');
-
       } else {
         movieTrailer(poster?.name || poster?.original_name || poster?.title || '')
           .then(url => {

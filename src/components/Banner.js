@@ -53,7 +53,7 @@ function Banner() {
         <div className="button-block">
           <a href="https://www.netflix.com/"><button className="banner-first_button"><i className='play icon'/>Play</button></a>
           <button className="banner-second_button" onClick={togglePopup} ><i className='info circle icon' />More info</button>
-          {popup? <Popup description={movie?.overview} img_src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} close={togglePopup} title={movie?.title || movie?.original_name || movie?.name} popularity={Math.floor(movie?.popularity)} /> : null}
+          {popup? <Popup description={movie?.overview} img_src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} close={togglePopup} title={movie?.title || movie?.original_name || movie?.name} popularity={Math.floor(movie?.popularity)}  /> : null}
         </div>
         <div className="banner-description">
           <p>{truncate(movie?.overview, 300)}</p>

@@ -67,7 +67,7 @@
 }
 .popup_loremipsum {
   background-color: #292929;
-  border: 1px none solid;
+  border: none ;
   border-radius: 4px;
   margin: 20px auto 0 auto;
   width: 500px;
